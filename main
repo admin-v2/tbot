@@ -3,7 +3,8 @@ from vkbottle import API
 import sqlite3
 from datetime import datetime, timedelta
 from pydantic import BaseModel
-#from backg import keep_alived
+from backg import keep_alived
+from set import tokk
 
 
 class Meser(BaseModel):
@@ -20,12 +21,10 @@ cursor.execute('''CREATE TABLE IF NOT EXISTS other
                                 (gban TEXT PRIMARY KEY)''')
 conn.commit()
 bot = Bot(
-    "vk1.a.eYZA7I9YJqQRwvdmrDrshCgOVygMKiz-Nq1-tYFBok2NFOoXh6Ke94IjQ8IC5_DgX_Py0sRy7dl4aSa5zkHBGDe9A9uiWGAuHV1A6DdUfPJAPeA-dyo4X1YNcUKQn_H3nw2jPZcr3Got_kpywXj_0OKvueHFqPUMSs2beksOWvZ33eD8hPY71uVm5PY6UChLLFHMMRipVK5YjaVpCe8p5A"
-)
+tokk)
 api = API(
     token=
-    "vk1.a.eYZA7I9YJqQRwvdmrDrshCgOVygMKiz-Nq1-tYFBok2NFOoXh6Ke94IjQ8IC5_DgX_Py0sRy7dl4aSa5zkHBGDe9A9uiWGAuHV1A6DdUfPJAPeA-dyo4X1YNcUKQn_H3nw2jPZcr3Got_kpywXj_0OKvueHFqPUMSs2beksOWvZ33eD8hPY71uVm5PY6UChLLFHMMRipVK5YjaVpCe8p5A"
-)
+tokk)
 
 
 @bot.on.private_message(text="<msg>")
@@ -2609,5 +2608,5 @@ async def hmmmm(ans: Message):
 
 
 conn.close()
-#keep_alived()
+keep_alived()
 bot.run_forever()
